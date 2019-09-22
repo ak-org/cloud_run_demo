@@ -67,7 +67,7 @@ Point your browser to 127.0.0.1:8080
 gcloud beta run deploy cloud-run-demo \
        --image gcr.io/cloud-run-demo-253718/cloud_run_demo \
        --platform=managed \
-       --memory=64Mi \
+       --memory=128Mi \
        --allow-unauthenticated \
        --region=us-central1
 ```
