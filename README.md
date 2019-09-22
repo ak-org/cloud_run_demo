@@ -2,9 +2,10 @@
 This is a brief tutorial to run container using Cloud Run on Google Cloud Platform. It is part of my presentation at a meet up organized by Google Cloud Group - San Francisco https://www.meetup.com/GDGSanFrancisco/
 
 ## Pre-requsites
-You have installed `gcloud` and `docker` utility and gcloud is pointing to appropriate project in your GCP account. 
+You have installed `gcloud` and `docker` utility and `gcloud` is pointing to appropriate project in your GCP account. 
 
 Following APIs should be enabled in your project:
+
 - Cloud Build API
 - Cloud Run API
 
@@ -13,10 +14,7 @@ Your authenticate account has appropriate permissions.
 ```
 gcloud auth activate-service-account --key-file=./cloud-run-demo-c807c3bf0190.json 
 ```
-## Caution
-The instructions below contain my gcp project name `cloud-run-demo-253718` 
 
-Make sure to replace it with your project in GCP.
 
 ## Steps
 - Build and test application locally
@@ -64,7 +62,7 @@ Point your browser to 127.0.0.1:8080
 gcloud beta run deploy cloud-run-demo \
        --image gcr.io/cloud-run-demo-253718/cloud_run_demo \
        --platform=managed \
-       --memory=128Mi \
+       --memory=64Mi \
        --allow-unauthenticated \
        --region=us-central1
 ```
@@ -73,6 +71,11 @@ gcloud beta run deploy cloud-run-demo \
 ```
 gcloud beta run services list --platform managed
 gcloud beta run revisions list --platform managed
+```
+
+#### Stress test the service
+```
+ab -c 100 -n 10000 -r https://cloud-run-demo-rkde4t733q-uc.a.run.app/
 ```
 
 
