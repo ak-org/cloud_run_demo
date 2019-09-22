@@ -9,7 +9,7 @@ Following APIs should be enabled in your project:
 - Cloud Build API
 - Cloud Run API
 
-Your authenticate account has appropriate permissions.
+Your authenticated account has appropriate permissions.
 
 ```
 gcloud auth activate-service-account --key-file=./cloud-run-demo-c807c3bf0190.json 
