@@ -13,7 +13,10 @@ Your authenticate account has appropriate permissions.
 ```
 gcloud auth activate-service-account --key-file=./cloud-run-demo-c807c3bf0190.json 
 ```
+## Caution
+The instructions below contain my gcp project name `cloud-run-demo-253718` 
 
+Make sure to replace it with your project in GCP.
 
 ## Steps
 - Build and test application locally
