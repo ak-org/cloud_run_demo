@@ -1,5 +1,5 @@
 ## Overview
-This is a brief tutorial to run container using Cloud Run on Google Cloud Platform. It is part of my presentation at a meet up organized by Google Cloud Group - San Francisco https://www.meetup.com/GDGSanFrancisco/
+This is a brief tutorial to run container using Cloud Run on Google Cloud Platform. It is part of my presentation at the Google Cloud Group - San Francisco (https://www.meetup.com/GDGSanFrancisco/) meet up.
 
 ## Presentation Link
 ```
@@ -14,7 +14,7 @@ Following APIs should be enabled in your project:
 - Cloud Build API
 - Cloud Run API
 
-Your authenticated account has appropriate permissions.
+Your authenticated account has appropriate permissions. Ofcourse, your json file name will be different and unique to your GCP environment.
 
 ```
 gcloud auth activate-service-account --key-file=./cloud-run-demo-c807c3bf0190.json 
