@@ -82,6 +82,7 @@ gcloud beta run revisions list --platform managed
 ```
 ab -c 100 -n 10000 -r https://cloud-run-demo-rkde4t733q-uc.a.run.app/
 ```
+Your app URL will be different from what is show above. 
 
 
 
